@@ -3,34 +3,77 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap" rel="stylesheet">
   <title>Frontend Mentor | 3-column preview card component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        fontFamily: {
+          'sans': ['"Lexend Deca"', 'sans-serif'],
+          'cursive': ['"Big Shoulders Display"', 'cursive'],
+        },
+        extend: {
+          colors: {
+            'bright-orange': 'hsl(31, 77%, 52%)',
+            'dark-cyan': 'hsl(184, 100%, 22%)',
+            'very-dark-cyan': 'hsl(179, 100%, 13%)',
+            'transparent-white': 'hsla(0, 0%, 100%, 0.75)',
+            'very-light-gray': 'hsl(0, 0%, 95%)',
+          },
+          fontSize: {
+            'body': ['0.9375rem', {
+              lineHeight: '1.625',
+              fontWeight: '500',
+            }],
+          },
+        }
+      }
+    }
+  </script>
 </head>
 <body>
-  
-  Sedans
-  Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city 
-  or on your next road trip.
-
-  SUVs
-  Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation 
-  and off-road adventures.
-
-  Luxury
-  Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury 
-  rental and arrive in style.
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+<!--  background container  -->
+<div class="flex items-center justify-center min-h-screen bg-very-light-gray">
+  <!--  card container  -->
+  <div class="mx-6 max-w-sm flex flex-col lg:flex-row">
+    <div class="flex-0 p-12 bg-bright-orange rounded-t-lg">
+      <img src="images/icon-sedans.svg" alt="sedans">
+      <h1 class="mt-8 uppercase font-cursive font-bold text-4xl text-very-light-gray">Sedans</h1>
+      <p class="mt-8 font-sans text-body text-transparent-white">
+        Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city
+        or on your next road trip.
+      </p>
+      <a class="inline-block group mt-6 px-8 py-3 bg-very-light-gray text-bright-orange rounded-full" href="#">
+        Learn More
+      </a>
+    </div>
+    <div class="flex-0 p-12 bg-dark-cyan">
+      <img src="images/icon-suvs.svg" alt="suvs">
+      <h1 class="mt-8 uppercase font-cursive font-bold text-4xl text-very-light-gray">SUVs</h1>
+      <p class="mt-8 font-sans text-body text-transparent-white">
+        Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation
+        and off-road adventures.
+      </p>
+      <a class="inline-block group mt-6 px-8 py-3 bg-very-light-gray text-dark-cyan rounded-full" href="#">
+        Learn More
+      </a>
+    </div>
+    <div class="flex-0 p-12 bg-very-dark-cyan rounded-b-lg">
+      <img src="images/icon-luxury.svg" alt="luxury">
+      <h1 class="mt-8 uppercase font-cursive font-bold text-4xl text-very-light-gray">Luxury</h1>
+      <p class="mt-8 font-sans text-body text-transparent-white">
+        Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury
+        rental and arrive in style.
+      </p>
+      <a class="inline-block group mt-6 px-8 py-3 bg-very-light-gray text-very-dark-cyan rounded-full" href="#">
+        Learn More
+      </a>
+    </div>
   </div>
+</div>
 </body>
 </html>
