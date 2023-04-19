@@ -11,12 +11,12 @@
   <title>Frontend Mentor | 3-column preview card component</title>
 </head>
 <body>
-<!--  background container  -->
+<!--  Global Container  -->
 <div class="flex items-center justify-center min-h-screen bg-very-light-gray">
-  <!--  card container  -->
-  <div class="px-6 py-20 max-w-[375px] flex flex-col xl:flex-row xl:max-w-[960px]">
-    <div class="p-12 bg-bright-orange rounded-t-lg xl:rounded-l-lg xl:rounded-r-none">
-      <img src="images/icon-sedans.svg" alt="sedans">
+  <!--  Card Container  -->
+  <div class="max-w-[327px] mx-6 my-20 flex flex-col xl:flex-row xl:w-[960px] xl:max-w-full">
+    <div class="flex flex-col items-start p-12 bg-bright-orange rounded-t-lg xl:flex-auto xl:rounded-l-lg xl:rounded-r-none">
+      <img class="w-16" src="images/icon-sedans.svg" alt="sedans">
       <h1 class="mt-8 uppercase font-cursive font-bold text-4xl text-very-light-gray">Sedans</h1>
       <p class="mt-8 text-body text-transparent-white">
         Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city
@@ -28,8 +28,8 @@
         Learn More
       </a>
     </div>
-    <div class="p-12 bg-dark-cyan">
-      <img src="images/icon-suvs.svg" alt="suvs">
+    <div class="flex flex-col items-start p-12 bg-dark-cyan xl:flex-auto ">
+      <img class="w-16" src="images/icon-suvs.svg" alt="suvs">
       <h1 class="mt-8 uppercase font-cursive font-bold text-4xl text-very-light-gray">SUVs</h1>
       <p class="mt-8 text-body text-transparent-white">
         Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation
@@ -41,8 +41,8 @@
         Learn More
       </a>
     </div>
-    <div class="p-12 bg-very-dark-cyan rounded-b-lg xl:rounded-r-lg xl:rounded-l-none">
-      <img src="images/icon-luxury.svg" alt="luxury">
+    <div class="flex flex-col items-start p-12 bg-very-dark-cyan rounded-b-lg xl:flex-auto xl:rounded-r-lg xl:rounded-l-none">
+      <img class="w-16" src="images/icon-luxury.svg" alt="luxury">
       <h1 class="mt-8 uppercase font-cursive font-bold text-4xl text-very-light-gray">Luxury</h1>
       <p class="mt-8 text-body text-transparent-white">
         Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury
